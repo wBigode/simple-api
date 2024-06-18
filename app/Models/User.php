@@ -11,5 +11,5 @@ class User extends Model
 
     protected $primaryKey = 'user_id';
 
-    protected $table = 'user';
+    protected $table = 'simple_api.user';
 }

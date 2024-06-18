@@ -11,5 +11,5 @@ class Movement extends Model
 
     protected $primaryKey = 'movement_id';
 
-    protected $table = 'movement';
+    protected $table = 'simple_api.movement';
 }

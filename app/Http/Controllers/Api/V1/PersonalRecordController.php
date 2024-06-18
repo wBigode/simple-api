@@ -19,14 +19,14 @@ class PersonalRecordController extends Controller
                 return response()->json(['error' => 'Movement not found.'], 404);
             }
 
-            $pr_results = DB::table('personal_record as pr')
+            $pr_results = DB::table('simple_api.personal_record as pr')
                 ->select(
                     'user.name as user_name',
                     DB::raw('MAX(pr.value) as personal_record'),
                     DB::raw('DENSE_RANK() OVER (ORDER BY MAX(pr.value) DESC) as position'),
                     DB::raw('MAX(pr.date) as date'),
                 )
-                ->join('user', 'pr.user_id', '=', 'user.user_id')
+                ->join('simple_api.user', 'pr.user_id', '=', 'user.user_id')
                 ->where('pr.movement_id', $movement_id)
                 ->groupBy('pr.user_id', 'user.name')
                 ->orderByDesc('personal_record')

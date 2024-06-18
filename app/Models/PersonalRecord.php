@@ -9,7 +9,7 @@ class PersonalRecord extends Model
 {
     use HasFactory;
 
-    protected $table = 'personal_record';
+    protected $table = 'simple_api.personal_record';
 
     public function user()
     {
