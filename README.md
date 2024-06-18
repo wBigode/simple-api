@@ -20,7 +20,7 @@ Siga os passos abaixo para configurar e executar o projeto localmente:
 
 ### 1. Instalar Dependências 💽
 
-No diretório raiz do projeto, execute o seguinte comando para instalar as dependências com o Composer:
+No diretório raiz do projeto converta o arquivo `.env.example` para `.env` e execute o seguinte comando para instalar as dependências com o Composer:
 
 ```bash
 composer install
